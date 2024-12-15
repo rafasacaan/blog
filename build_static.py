@@ -34,14 +34,14 @@ base_template = """
         }
         a { text-decoration: none; }
         .blog-title { max-width: 800px; margin: 2rem auto; }
-        .blog-title h1 { color: darkgreen; }
+        .blog-title h1 { color: darkgrey; }
         .blog-post { max-width: 800px; margin: 2rem auto; }
-        .blog-post h1 { color: darkgreen; background: none; }
+        .blog-post h1 { color: lightseagreen; background: powderblue; }
         .blog-list { padding: 0; }
         .blog-list li {list-style-type: decimal-leading-zero;}
         .post-date { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
         .post-title { margin-bottom: 0.5rem; color: darkgrey; background: none;}
-        .post-title a {color: darkgray;}
+        .post-title a {color: cadetblue; background: powderblue;}
 
         /* Search bar styles */
         .search-container {
