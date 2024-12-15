@@ -42,6 +42,24 @@ base_template = """
         .post-date { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
         .post-title { margin-bottom: 0.5rem; color: darkgrey; background: none;}
         .post-title a {color: darkgray;}
+
+        /* Search bar styles */
+        .search-container {
+            max-width: 800px;
+            margin: 2rem auto 1rem;
+        }
+        .search-container input {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: sans-serif;
+        }
+        .search-container input:focus {
+            outline: none;
+            border-color: darkgreen;
+        }
     </style>
     <style>      
         .htmx-indicator{opacity:0}      
@@ -49,6 +67,24 @@ base_template = """
         .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      
         .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      
     </style>
+    <script>
+        function filterPosts() {
+            const query = document.getElementById('search').value.toLowerCase();
+            const posts = document.querySelectorAll('.blog-list li');
+            
+            posts.forEach(post => {
+                const title = post.querySelector('.post-title').textContent.toLowerCase();
+                const description = post.querySelector('p') ? 
+                    post.querySelector('p').textContent.toLowerCase() : '';
+                
+                if (title.includes(query) || description.includes(query)) {
+                    post.style.display = '';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <main class="container">
@@ -68,6 +104,9 @@ index_template = """
         hola, mi nombre es rafa, soy data scientist y voy a empezar a juntar mis notas por acá. 
         espero que estos pedazos de conocimiento sean de ayuda para alguien más también!
     </p>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search posts..." oninput="filterPosts()">
+    </div>
     <ul class="blog-list">
     {% for post in posts %}
         <li>

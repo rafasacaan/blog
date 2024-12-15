@@ -8,7 +8,29 @@ from datetime import datetime
 app, rt = fast_app(
     hdrs=(
         MarkdownJS(),
-        Link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap"),
+        Link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap"),    
+        
+        # Search bar javascript
+        Script("""
+            function filterPosts() {
+                const query = document.getElementById('search').value.toLowerCase();
+                const posts = document.querySelectorAll('.blog-list li');
+                
+                posts.forEach(post => {
+                    const title = post.querySelector('.post-title').textContent.toLowerCase();
+                    const description = post.querySelector('p') ? 
+                        post.querySelector('p').textContent.toLowerCase() : '';
+                    
+                    if (title.includes(query) || description.includes(query)) {
+                        post.style.display = '';
+                    } else {
+                        post.style.display = 'none';
+                    }
+                });
+            }
+        """),
+
+        # Web css
         Style("""            
             body { 
                 font-family: sans-serif; 
@@ -20,15 +42,33 @@ app, rt = fast_app(
             }
             a { text-decoration: none; }
             .blog-title { max-width: 800px; margin: 2rem auto; }
-            .blog-title h1 { color: darkgreen; }
+            .blog-title h1 { color: darkgrey; }
             .blog-post { max-width: 800px; margin: 2rem auto; }
-            .blog-post h1 { color: darkgreen; background: none; }
+            .blog-post h1 { color: lightseagreen; background: powderblue; }
             .blog-list { padding: 0; }
             .blog-list li {list-style-type: decimal-leading-zero;}
             .post-date { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
             .post-title { margin-bottom: 0.5rem; color: darkgrey; background: none;}
-            .post-title a {color: darkgray;}
-        """),        
+            .post-title a {color: cadetblue; background: powderblue;}
+              
+            /* Search bar styles */
+            .search-container {
+                max-width: 800px;
+                margin: 2rem auto 1rem;
+            }
+            .search-container input {
+                width: 100%;
+                padding: 0.5rem;
+                font-size: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-family: sans-serif;
+            }
+            .search-container input:focus {
+                outline: none;
+                border-color: darkgreen;
+            }
+        """),    
     )
 )
 
@@ -61,6 +101,16 @@ def get():
           hola, mi nombre es rafa, soy data scientist y voy a empezar a juntar mis notas por acá. 
           espero que estos pedazos de conocimiento sean de ayuda para alguien más también!
         """),
+        # Add search bar
+        Div(
+            Input(
+                type="text", 
+                id="search", 
+                placeholder="Busca tu post...",
+                oninput="filterPosts()"
+            ),
+            cls="search-container"
+        ),
         Ul(
             *[Li(
                 H3(A(post.metadata['title'], href=post.metadata['url']), cls="post-title"),
