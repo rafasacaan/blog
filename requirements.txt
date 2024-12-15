@@ -1,0 +1,4 @@
+python-fasthtml
+python-frontmatter
+markdown
+jinja2

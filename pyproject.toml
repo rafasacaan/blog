@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "blog"
+version = "0.1.0"
+description = "Personal blog"
+authors = ["rafasacaan <rafasacaan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-fasthtml = {git = "https://github.com/AnswerDotAI/fasthtml"}
+markdown = "^3.7"
+frontmatter = "^3.0.8"
+python-frontmatter = "^1.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
