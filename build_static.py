@@ -14,13 +14,16 @@ base_template = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rafasacaan</title>
-    # <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
-    <style>
-        # :root { --pico-font-size: 100%; }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script src="https://unpkg.com/htmx.org@2.0.3/dist/htmx.min.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/fasthtml-js@1.0.4/fasthtml.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/surreal@main/surreal.js"></script><script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script>     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@latest/css/pico.min.css">
+    <style>:root { --pico-font-size: 100%; }</style>
+    <script type="module">import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+        proc_htmx('.marked', e => e.innerHTML = marked.parse(e.textContent));
+    </script>     
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;display=swap">
+    <style>            
         body { 
             font-family: sans-serif; 
             line-height: 1.6;
@@ -39,6 +42,12 @@ base_template = """
         .post-date { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
         .post-title { margin-bottom: 0.5rem; color: darkgrey; background: none;}
         .post-title a {color: darkgray;}
+    </style>
+    <style>      
+        .htmx-indicator{opacity:0}      
+        .htmx-request 
+        .htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      
+        .htmx-request.htmx-indicator{opacity:1; transition: opacity 200ms ease-in;}      
     </style>
 </head>
 <body>
