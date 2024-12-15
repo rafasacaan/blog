@@ -7,12 +7,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <script src="https://unpkg.com/htmx.org@2.0.3/dist/htmx.min.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/fasthtml-js@1.0.4/fasthtml.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/surreal@main/surreal.js"></script><script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script>     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@latest/css/pico.min.css">
-    <style>:root { --pico-font-size: 100%; }</style>
     <script type="module">import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
         proc_htmx('.marked', e => e.innerHTML = marked.parse(e.textContent));
     </script>     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;display=swap">
-    <style>            
+    <style>
+        :root { --pico-font-size: 80%; }
         body { 
             font-family: sans-serif; 
             line-height: 1.6;
