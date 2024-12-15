@@ -177,4 +177,8 @@ template = env.get_template("index.html")
 output = template.render(posts=posts)
 (dist_dir / "index.html").write_text(output)
 
+# Copy CNAME file to dist directory
+if Path("CNAME").exists():
+    shutil.copy("CNAME", dist_dir / "CNAME")
+
 print("Static site built successfully!")
