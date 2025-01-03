@@ -25,15 +25,19 @@ Con esto le estoy diciendo a `uv` que quiero inicializar un proyecto que se llam
 
 ```
 |-- README.md
+
 |-- pyproject.toml
+
 |-- src
+
     |-- hey-bob
+
         |-- __init__.py
 ```
 
 Buenísima! Ahora veamos qué hay dentro de `pyproject.toml`.
 
-```bash
+```
 [project]
 name = "hey-bob"
 version = "0.1.0"
