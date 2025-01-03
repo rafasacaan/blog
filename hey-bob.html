@@ -82,7 +82,7 @@
     <h1>Invocando a Bob - random lyrics en tu terminal</h1>
     <div class="post-date">January 03, 2025</div>
     <div class="markdown-content">
-        <p><strong>Tags</strong>: uv, bob</p>
+        <p><strong>Tags</strong>: <code>uv</code>, <code>bob</code></p>
 <p>A veces me pasa que cuando llevo mucho tiempo escribiendo código, necesito invocar a la aleatoriedad para inyectarme una dosis de nueva energía. Se me ocurrió que Bob Dylan sería la la fuente indicada a quien recurrir, es por eso que cree esta librería de python que te devuelve texto en tu terminal con algunas frases aleatorias sacadas de sus canciones para los momentos en qué más lo necesites.</p>
 <p>En este post te cuento cómo lo hice.</p>
 <h2>Cómo lo hice?</h2>
@@ -92,15 +92,11 @@
 <p><code>bash
 uv init hey-bob --python 3.8 --package</code></p>
 <p>Con esto le estoy diciendo a <code>uv</code> que quiero inicializar un proyecto que se llama <code>hey-bob</code>, que usa al menos la versión 3.8 de python, y que quiero que tenga la estructura de un paquete de python. El <em>tree</em> del proyecto se ve así:</p>
-<p>```
-|-- README.md</p>
-<p>|-- pyproject.toml</p>
-<p>|-- src</p>
-<pre><code>|-- hey-bob
-
-    |-- __init__.py
-</code></pre>
-<p>```</p>
+<p><code>|-- README.md
+    |-- pyproject.toml
+    |-- src
+        |-- hey-bob
+            |-- __init__.py</code></p>
 <p>Buenísima! Ahora veamos qué hay dentro de <code>pyproject.toml</code>.</p>
 <p>```
 [project]
@@ -232,15 +228,15 @@ I don’t build up illusion ’til it makes me sick</p>
 </ul>
 <h3>Publicando a PyPl</h3>
 <p>Para publicar nuestro paquete de python, primero utilizamos <code>uv build --wheel</code> que construye el paquete en formato wheel, optimizado para la distribución. </p>
-<p>Luego, con <code>uv pip install build twine</code> instalamos las herramientas necesarias: 
-- 'build' para crear los artefactos de distribución y 
-- 'twine' para la carga segura a PyPI. </p>
+<p>Luego, con <code>uv pip install build twine</code> instalamos las herramientas necesarias: </p>
+<ul>
+<li><em>build</em> para crear los artefactos de distribución y </li>
+<li><em>twine</em> para la carga segura a PyPI. </li>
+</ul>
 <p>El comando <code>python -m build</code> genera tanto el archivo wheel como el source distribution (sdist) en el directorio 'dist/'. </p>
 <p>Finalmente, <code>python -m twine upload dist/*</code> sube todos los artefactos generados a PyPI, donde estarán disponibles para que cualquiera pueda instalarlos usando pip o uv. Durante este último paso, tendrás que autenticarte con tus credenciales de PyPI.</p>
 <h3>Nota:</h3>
-<p><code>uv</code> <em>cachea</em> las operaciones del <em>environment</em>, por lo que puede ser necesario borrar el ambiente y el caché de <code>uv</code> y crearlo de nuevo para visualizar los cambios hechos en el código de fuente. Para esto typear en el terminal:
-- rm -rf ~/.cache/uv
-- rm -rf .venv</p>
+<p><code>uv</code> <em>cachea</em> las operaciones del <em>environment</em>, por lo que puede ser necesario borrar el ambiente y el caché de <code>uv</code> y crearlo de nuevo para visualizar los cambios hechos en el código de fuente. Para esto typear en el terminal <code>rm -rf ~/.cache/uv</code> y <code>rm -rf .venv</code>.</p>
     </div>
     <p><a href="index.html">← Back to Home</a></p>
 </div>
