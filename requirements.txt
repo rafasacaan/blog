@@ -1,37 +1,6 @@
-anyio==4.7.0 ; python_version >= "3.12" and python_version < "4.0"
-beautifulsoup4==4.12.3 ; python_version >= "3.12" and python_version < "4.0"
-certifi==2024.12.14 ; python_version >= "3.12" and python_version < "4.0"
-click==8.1.7 ; python_version >= "3.12" and python_version < "4.0"
-colorama==0.4.6 ; python_version >= "3.12" and python_version < "4.0" and (sys_platform == "win32" or platform_system == "Windows")
-fastcore==1.7.27 ; python_version >= "3.12" and python_version < "4.0"
-fastlite==0.0.13 ; python_version >= "3.12" and python_version < "4.0"
-frontmatter==3.0.8 ; python_version >= "3.12" and python_version < "4.0"
-h11==0.14.0 ; python_version >= "3.12" and python_version < "4.0"
-httpcore==1.0.7 ; python_version >= "3.12" and python_version < "4.0"
-httptools==0.6.4 ; python_version >= "3.12" and python_version < "4.0"
-httpx==0.28.1 ; python_version >= "3.12" and python_version < "4.0"
-idna==3.10 ; python_version >= "3.12" and python_version < "4.0"
-itsdangerous==2.2.0 ; python_version >= "3.12" and python_version < "4.0"
-markdown2==2.5.2 ; python_version >= "3.12" and python_version < "4"
-markdown==3.7 ; python_version >= "3.12" and python_version < "4.0"
-oauthlib==3.2.2 ; python_version >= "3.12" and python_version < "4.0"
-packaging==24.2 ; python_version >= "3.12" and python_version < "4.0"
-pygments==2.18.0 ; python_version >= "3.12" and python_version < "4.0"
-pymdown-extensions==10.13 ; python_version >= "3.12" and python_version < "4.0"
-python-dateutil==2.9.0.post0 ; python_version >= "3.12" and python_version < "4.0"
-python-dotenv==1.0.1 ; python_version >= "3.12" and python_version < "4.0"
-python-fasthtml @ git+https://github.com/AnswerDotAI/fasthtml@f1cc34660a4765f14b99a406a8e66efd37720e28 ; python_version >= "3.12" and python_version < "4.0"
-python-frontmatter==1.1.0 ; python_version >= "3.12" and python_version < "4.0"
-python-markdown-math==0.8 ; python_version >= "3.12" and python_version < "4.0"
-python-multipart==0.0.19 ; python_version >= "3.12" and python_version < "4.0"
-pyyaml==5.1 ; python_version >= "3.12" and python_version < "4.0"
-six==1.17.0 ; python_version >= "3.12" and python_version < "4.0"
-sniffio==1.3.1 ; python_version >= "3.12" and python_version < "4.0"
-soupsieve==2.6 ; python_version >= "3.12" and python_version < "4.0"
-sqlite-minutils==4.0.3 ; python_version >= "3.12" and python_version < "4.0"
-starlette==0.42.0 ; python_version >= "3.12" and python_version < "4.0"
-typing-extensions==4.12.2 ; python_version >= "3.12" and python_version < "3.13"
-uvicorn[standard]==0.33.0 ; python_version >= "3.12" and python_version < "4.0"
-uvloop==0.21.0 ; (sys_platform != "win32" and sys_platform != "cygwin") and platform_python_implementation != "PyPy" and python_version >= "3.12" and python_version < "4.0"
-watchfiles==1.0.3 ; python_version >= "3.12" and python_version < "4.0"
-websockets==14.1 ; python_version >= "3.12" and python_version < "4.0"
+python-fasthtml
+python-frontmatter
+markdown
+pygments
+pymdown-extensions
+jinja2
