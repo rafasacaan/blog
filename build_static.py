@@ -36,12 +36,12 @@ base_template = """
         .blog-title { max-width: 800px; margin: 2rem auto; }
         .blog-title h1 { color: darkgrey; }
         .blog-post { max-width: 800px; margin: 2rem auto; }
-        .blog-post h1 { color: lightseagreen; background: powderblue; }
+        .blog-post h1 { color: #ff00ff; background: #ffdb00;}
         .blog-list { padding: 0; }
         .blog-list li {list-style-type: decimal-leading-zero;}
         .post-date { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
         .post-title { margin-bottom: 0.5rem; color: darkgrey; background: none;}
-        .post-title a {color: cadetblue; background: powderblue;}
+        .post-title a {color: #ff00ff; background: #ffdb00;}
 
         /* Search bar styles */
         .search-container {
@@ -157,10 +157,25 @@ posts = []
 for file in posts_dir.glob("*.md"):
     with open(file) as f:
         post = frontmatter.load(f)
+
+        md = markdown.Markdown(extensions=[
+            'fenced_code',
+            'codehilite',
+            'tables',
+            'extra'
+        ], extension_configs={
+            'codehilite': {
+                'css_class': 'highlight',
+                'use_pygments': True,
+                'noclasses': True,  # This is important - it inlines the CSS
+                'pygments_style': 'friendly'
+            }
+        })
+
         # Change URL format to match the static site structure
         post.metadata['url'] = f"{file.stem}.html"
         post.metadata['date'] = post.metadata.get('date', datetime.fromtimestamp(file.stat().st_mtime))
-        post.metadata['content'] = markdown.markdown(post.content)
+        post.metadata['content'] = md.convert(post.content)
         posts.append(post.metadata)
 
 # Sort posts by date

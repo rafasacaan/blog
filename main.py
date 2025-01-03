@@ -1,8 +1,6 @@
 from fasthtml.common import *
 
 import markdown
-from pygments.formatters import HtmlFormatter
-from pygments.styles import get_style_by_name
 
 from pathlib import Path
 import frontmatter
