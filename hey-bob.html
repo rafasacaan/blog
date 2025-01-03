@@ -92,13 +92,17 @@
 <p><code>bash
 uv init hey-bob --python 3.8 --package</code></p>
 <p>Con esto le estoy diciendo a <code>uv</code> que quiero inicializar un proyecto que se llama <code>hey-bob</code>, que usa al menos la versión 3.8 de python, y que quiero que tenga la estructura de un paquete de python. El <em>tree</em> del proyecto se ve así:</p>
-<p><code>|-- README.md
-|-- pyproject.toml
-|-- src
-    |-- hey-bob
-        |-- __init__.py</code></p>
+<p>```
+|-- README.md</p>
+<p>|-- pyproject.toml</p>
+<p>|-- src</p>
+<pre><code>|-- hey-bob
+
+    |-- __init__.py
+</code></pre>
+<p>```</p>
 <p>Buenísima! Ahora veamos qué hay dentro de <code>pyproject.toml</code>.</p>
-<p>```bash
+<p>```
 [project]
 name = "hey-bob"
 version = "0.1.0"
