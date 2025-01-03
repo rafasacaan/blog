@@ -4,7 +4,7 @@ date: 2025-01-03
 description: Un paquete de python usando `uv` para obtener extractos random de canciones de Bob Dylan.
 ---
 
-**Tags**: uv, bob
+**Tags**: `uv`, `bob`
 
 A veces me pasa que cuando llevo mucho tiempo escribiendo código, necesito invocar a la aleatoriedad para inyectarme una dosis de nueva energía. Se me ocurrió que Bob Dylan sería la la fuente indicada a quien recurrir, es por eso que cree esta librería de python que te devuelve texto en tu terminal con algunas frases aleatorias sacadas de sus canciones para los momentos en qué más lo necesites.
 
@@ -24,15 +24,11 @@ uv init hey-bob --python 3.8 --package
 Con esto le estoy diciendo a `uv` que quiero inicializar un proyecto que se llama `hey-bob`, que usa al menos la versión 3.8 de python, y que quiero que tenga la estructura de un paquete de python. El *tree* del proyecto se ve así:
 
 ```
-|-- README.md
-
-|-- pyproject.toml
-
-|-- src
-
-    |-- hey-bob
-
-        |-- __init__.py
+    |-- README.md
+    |-- pyproject.toml
+    |-- src
+        |-- hey-bob
+            |-- __init__.py
 ```
 
 Buenísima! Ahora veamos qué hay dentro de `pyproject.toml`.
@@ -211,8 +207,9 @@ I don’t build up illusion ’til it makes me sick
 Para publicar nuestro paquete de python, primero utilizamos `uv build --wheel` que construye el paquete en formato wheel, optimizado para la distribución. 
 
 Luego, con `uv pip install build twine` instalamos las herramientas necesarias: 
-- 'build' para crear los artefactos de distribución y 
-- 'twine' para la carga segura a PyPI. 
+
+- *build* para crear los artefactos de distribución y 
+- *twine* para la carga segura a PyPI. 
 
 El comando `python -m build` genera tanto el archivo wheel como el source distribution (sdist) en el directorio 'dist/'. 
 
@@ -220,6 +217,4 @@ Finalmente, `python -m twine upload dist/*` sube todos los artefactos generados 
 
 
 ### Nota:
-`uv` *cachea* las operaciones del *environment*, por lo que puede ser necesario borrar el ambiente y el caché de `uv` y crearlo de nuevo para visualizar los cambios hechos en el código de fuente. Para esto typear en el terminal:
-- rm -rf ~/.cache/uv
-- rm -rf .venv
+`uv` *cachea* las operaciones del *environment*, por lo que puede ser necesario borrar el ambiente y el caché de `uv` y crearlo de nuevo para visualizar los cambios hechos en el código de fuente. Para esto typear en el terminal `rm -rf ~/.cache/uv` y `rm -rf .venv`.

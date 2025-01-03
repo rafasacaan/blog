@@ -1,4 +1,9 @@
 from fasthtml.common import *
+
+import markdown
+from pygments.formatters import HtmlFormatter
+from pygments.styles import get_style_by_name
+
 from pathlib import Path
 import frontmatter
 import markdown
@@ -44,12 +49,12 @@ app, rt = fast_app(
             .blog-title { max-width: 800px; margin: 2rem auto; }
             .blog-title h1 { color: darkgrey; }
             .blog-post { max-width: 800px; margin: 2rem auto; }
-            .blog-post h1 { color: lightseagreen; background: powderblue; }
+            .blog-post h1 { color: #ff00ff; background: #ffdb00;}
             .blog-list { padding: 0; }
             .blog-list li {list-style-type: decimal-leading-zero;}
             .post-date { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
             .post-title { margin-bottom: 0.5rem; color: darkgrey; background: none;}
-            .post-title a {color: cadetblue; background: powderblue;}
+            .post-title a {color: #ff00ff; background: #ffdb00;}
               
             /* Search bar styles */
             .search-container {
@@ -68,6 +73,12 @@ app, rt = fast_app(
                 outline: none;
                 border-color: darkgreen;
             }
+              
+            # code, kbd, pre {
+            #   background: #373737;
+            #   color: #ffffff;
+            # }
+                      
         """),    
     )
 )
@@ -130,16 +141,42 @@ def get(slug: str):
         file = POSTS_DIR / f"{slug}.md"
         with open(file) as f:
             post = frontmatter.load(f)
+            
+            # content = Div(
+            #     H1(post.metadata['title']),
+            #     Div(post.metadata['date'].strftime("%B %d, %Y"), cls="post-date"),
+            #     Div(NotStr(markdown2.markdown(
+            #         post.content,
+            #         extras=['fenced-code-blocks', 'code-friendly', 'tables']
+            #     )), cls="markdown-content"),
+            #     A("← Back to Home", href="/"),
+            #     cls="blog-post"
+            # )
+            
+            md = markdown.Markdown(extensions=[
+                'fenced_code',
+                'codehilite',
+                'tables',
+                'extra'
+            ], extension_configs={
+                'codehilite': {
+                    'css_class': 'highlight',
+                    'use_pygments': True,
+                    'noclasses': True,  # This is important - it inlines the CSS
+                    'pygments_style': 'friendly'
+                }
+            })
+            
             content = Div(
                 H1(post.metadata['title']),
                 Div(post.metadata['date'].strftime("%B %d, %Y"), cls="post-date"),
-                #Div(style="margin-top: 2rem"),
-                # Use NotStr to prevent HTML escaping
-                Div(NotStr(markdown.markdown(post.content)), cls="markdown-content"),
+                Div(NotStr(md.convert(post.content)), cls="markdown-content"),
                 A("← Back to Home", href="/"),
                 cls="blog-post"
             )
+
             return Title("rafasacaan"), content
+        
     except FileNotFoundError:
         return H1("Post not found")
 
