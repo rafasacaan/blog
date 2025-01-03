@@ -1,7 +1,5 @@
 from fasthtml.common import *
 
-import markdown
-
 from pathlib import Path
 import frontmatter
 import markdown
