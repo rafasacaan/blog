@@ -1,4 +1,6 @@
 python-fasthtml
 python-frontmatter
 markdown
+pygments
+pymdown-extensions
 jinja2
