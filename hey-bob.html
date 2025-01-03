@@ -25,12 +25,12 @@
         .blog-title { max-width: 800px; margin: 2rem auto; }
         .blog-title h1 { color: darkgrey; }
         .blog-post { max-width: 800px; margin: 2rem auto; }
-        .blog-post h1 { color: lightseagreen; background: powderblue; }
+        .blog-post h1 { color: #ff00ff; background: #ffdb00;}
         .blog-list { padding: 0; }
         .blog-list li {list-style-type: decimal-leading-zero;}
         .post-date { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
         .post-title { margin-bottom: 0.5rem; color: darkgrey; background: none;}
-        .post-title a {color: cadetblue; background: powderblue;}
+        .post-title a {color: #ff00ff; background: #ffdb00;}
 
         /* Search bar styles */
         .search-container {
@@ -89,143 +89,164 @@
 <p>Dicen que todo buen proyecto nace como un paquete de python. Para crear mi propio paquete del gran Bob quise usar la librería de python <code>uv</code>. Su promesa es que reemplaza a <code>pip</code>, <code>poetry</code> entre otras, y que administra las librerías mucho más rápido (usa Rust). Más sobre <code>uv</code> y de cómo instalarlo <a href="https://github.com/astral-sh/uv">acá</a>.</p>
 <h3>Estructura de la librería</h3>
 <p>Una vez instalado <code>uv</code>, podemos ir al lugar donde queremos crear nuestro paquete y escribir en la terminal:</p>
-<p><code>bash
-uv init hey-bob --python 3.8 --package</code></p>
+<pre class="highlight"><code class="language-bash">uv init hey-bob --python 3.8 --package
+</code></pre>
+
 <p>Con esto le estoy diciendo a <code>uv</code> que quiero inicializar un proyecto que se llama <code>hey-bob</code>, que usa al menos la versión 3.8 de python, y que quiero que tenga la estructura de un paquete de python. El <em>tree</em> del proyecto se ve así:</p>
-<p><code>|-- README.md
+<pre class="highlight"><code>    |-- README.md
     |-- pyproject.toml
     |-- src
         |-- hey-bob
-            |-- __init__.py</code></p>
+            |-- __init__.py
+</code></pre>
+
 <p>Buenísima! Ahora veamos qué hay dentro de <code>pyproject.toml</code>.</p>
-<p>```
-[project]
-name = "hey-bob"
-version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
+<pre class="highlight"><code>[project]
+name = &quot;hey-bob&quot;
+version = &quot;0.1.0&quot;
+description = &quot;Add your description here&quot;
+readme = &quot;README.md&quot;
 authors = [
-    { name = "rafasacaan", email = "rafasacaan@gmail.com" }
+    { name = &quot;rafasacaan&quot;, email = &quot;rafasacaan@gmail.com&quot; }
 ]
-requires-python = "&gt;=3.8"
-dependencies = []</p>
-<p>[project.scripts]
-hey-bob = "hey_bob:main"</p>
-<p>[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-```</p>
+requires-python = &quot;&gt;=3.8&quot;
+dependencies = []
+
+[project.scripts]
+hey-bob = &quot;hey_bob:main&quot;
+
+[build-system]
+requires = [&quot;hatchling&quot;]
+build-backend = &quot;hatchling.build&quot;
+</code></pre>
+
 <p>Vemos que tenemos info sobre nuestro proyecto, así como un entry point en <code>hey_bob:main</code>.</p>
 <p>Ahora, nos falta crear un ambiente de python adecuado. Para esto en el root de nuestro proyecto escribimos</p>
-<p><code>uv venv --python 3.8</code></p>
+<pre class="highlight"><code>uv venv --python 3.8
+</code></pre>
+
 <p>con lo que aparecerá una nueva carpeta escondida llamada <code>.venv</code>. Podemos activar nuestro <em>environment</em> de python con </p>
-<p><code>source .venv/bin/activate</code></p>
-<p>Para procesar las letras de Bob necesitaremos instalar <code>pandas</code>. 
-<code>uv add pandas</code></p>
+<pre class="highlight"><code>source .venv/bin/activate
+</code></pre>
+
+<p>Para procesar las letras de Bob necesitaremos instalar <code>pandas</code>. </p>
+<pre class="highlight"><code>uv add pandas
+</code></pre>
+
 <p>Hasta ahora, tenemos los huesos de nuestra librería de python. Ahora, a lo que vinimos: las letras del gran Bob.</p>
 <h3>Letras random</h3>
 <p>Qué mejor fuente de <em>datasets</em> que kaggle. Encontré ahí un <a href="https://www.kaggle.com/datasets/cloudy17/bob-dylan-songs">dataset</a> con muchísimas letras de las canciones de Bob entre 1961 y el 2020. </p>
 <p>Guardé el <em>.csv</em> dentro de <code>src/hey-bob/data</code> y creé un script de python en <code>src/hey-bob/services.py</code> donde vivirán las funciones principales de la librería.</p>
 <p>Pero antes, necesito un jupyter notebook para jugar con los datos y crear una buena función. Para esto instalamos <em>jupyter</em> en modalidad dev:</p>
-<p><code>bash
-uv add jupyter --dev</code></p>
+<pre class="highlight"><code class="language-bash">uv add jupyter --dev
+</code></pre>
+
 <p>Después de jugar un rato en el jupyter notebook, creé las siguientes funciones:</p>
-<p>```python
-import pandas as pd
+<pre class="highlight"><code class="language-python">import pandas as pd
 import random
-from pathlib import Path</p>
-<p>def load_pickle():
-    current_dir = Path(<strong>file</strong>).parent
-    data_file = current_dir / 'data' / 'lyrics.csv'</p>
-<pre><code>if not data_file.exists():
-    raise FileNotFoundError(f"Could not find data file at {data_file}")
+from pathlib import Path
 
-return pd.read_pickle(data_file)
-</code></pre>
-<p>def get_random_lyrics(df, year=None):</p>
-<pre><code>if year is not None:
-    available_years = sorted(df['release_year'].unique())
+def load_pickle():
+    current_dir = Path(__file__).parent
+    data_file = current_dir / 'data' / 'lyrics.csv'
 
-    if year not in available_years:
-        closest_year = min(available_years, key=lambda x: abs(x - year))
-        filtered_df = df[df['release_year'] == closest_year]
+    if not data_file.exists():
+        raise FileNotFoundError(f&quot;Could not find data file at {data_file}&quot;)
+
+    return pd.read_pickle(data_file)
+
+
+
+def get_random_lyrics(df, year=None):
+
+    if year is not None:
+        available_years = sorted(df['release_year'].unique())
+
+        if year not in available_years:
+            closest_year = min(available_years, key=lambda x: abs(x - year))
+            filtered_df = df[df['release_year'] == closest_year]
+        else:
+            filtered_df = df[df['release_year'] == year]
     else:
-        filtered_df = df[df['release_year'] == year]
-else:
-    filtered_df = df
-    selected_song = filtered_df.sample(n=1).iloc[0]
+        filtered_df = df
+        selected_song = filtered_df.sample(n=1).iloc[0]
 
 
-# Extract song data
-song_name, song_year = selected_song.title, selected_song.release_year
+    # Extract song data
+    song_name, song_year = selected_song.title, selected_song.release_year
 
-# Split into lines
-lines = [line.strip() for line in selected_song['lyrics'].split('\n') if line.strip()]
+    # Split into lines
+    lines = [line.strip() for line in selected_song['lyrics'].split('\n') if line.strip()]
 
-# Select a random starting point
-start_index = random.randint(0, max(0, len(lines) - 4))
+    # Select a random starting point
+    start_index = random.randint(0, max(0, len(lines) - 4))
 
-# Get up to 4 consecutive lines
-selected_lines = lines[start_index:start_index + 4]
+    # Get up to 4 consecutive lines
+    selected_lines = lines[start_index:start_index + 4]
 
-# Join the lines with newlines
-selected_text = '\n'.join(selected_lines)
+    # Join the lines with newlines
+    selected_text = '\n'.join(selected_lines)
 
-return song_name, song_year, selected_text
+    return song_name, song_year, selected_text
 </code></pre>
-<p>```</p>
+
 <p>Tenemos que indicarle a nuestro paquete las funciones que queremos disponibilizar. Esto lo hacemos en <code>__init__.py</code></p>
-<p>```python
-from .services import get_random_lyrics, load_pickle
-from .<strong>main</strong> import main</p>
-<p><strong>all</strong> = ['get_random_lyrics', 'load_pickle']
-```</p>
+<pre class="highlight"><code class="language-python">from .services import get_random_lyrics, load_pickle
+from .__main__ import main
+
+__all__ = ['get_random_lyrics', 'load_pickle']
+</code></pre>
+
 <p>Y también crear nuestro archivo <code>__main__.py</code>.</p>
-<p>```python
-import argparse
-from .services import get_random_lyrics, load_pickle</p>
-<p>def main():
+<pre class="highlight"><code class="language-python">import argparse
+from .services import get_random_lyrics, load_pickle
+
+def main():
     parser = argparse.ArgumentParser(description='Get random song lyrics')
-    parser.add_argument('--year', type=int, help='Specific year to get lyrics from (optional)', default=None)</p>
-<pre><code>args = parser.parse_args()
+    parser.add_argument('--year', type=int, help='Specific year to get lyrics from (optional)', default=None)
 
-try:
-    # Load the data first
-    df = load_pickle()
+    args = parser.parse_args()
 
-    # Get random verse
-    song_name, song_year, text = get_random_lyrics(df, year=args.year)
+    try:
+        # Load the data first
+        df = load_pickle()
 
-    # Print with formatting
-    print(" ")
-    print(text)
-    print(f"- '{song_name}', {song_year} - Bob Dylan")
-    print(" ")
-    return 0
+        # Get random verse
+        song_name, song_year, text = get_random_lyrics(df, year=args.year)
 
-except FileNotFoundError:
-    print("Error: Could not find the lyrics data file.")
+        # Print with formatting
+        print(&quot; &quot;)
+        print(text)
+        print(f&quot;- '{song_name}', {song_year} - Bob Dylan&quot;)
+        print(&quot; &quot;)
+        return 0
+
+    except FileNotFoundError:
+        print(&quot;Error: Could not find the lyrics data file.&quot;)
+        return 1
+
+    except Exception as e:
+        print(f&quot;Error: {str(e)}&quot;)
     return 1
 
-except Exception as e:
-    print(f"Error: {str(e)}")
-return 1
-</code></pre>
-<p>if <strong>name</strong> == '<strong>main</strong>':
+
+if __name__ == '__main__':
     exit(main())
-```</p>
-<p>Ahora podemos instalar localmente nuestro paquete y probarlo.
-<code>uv pip install .</code></p>
-<p>Y voilá!  Si le pido una ayuda extra a Bob, me dice:
-```
-My head is on straight
+</code></pre>
+
+<p>Ahora podemos instalar localmente nuestro paquete y probarlo.</p>
+<pre class="highlight"><code>uv pip install .
+</code></pre>
+
+<p>Y voilá!  Si le pido una ayuda extra a Bob, me dice:</p>
+<pre class="highlight"><code>My head is on straight
 Most of the time
 I’m strong enough not to hate
-I don’t build up illusion ’til it makes me sick</p>
-<ul>
-<li>'Most of the Time', 1989, Bob Dylan
-```</li>
-</ul>
+I don’t build up illusion ’til it makes me sick
+
+- 'Most of the Time', 1989, Bob Dylan
+</code></pre>
+
 <h3>Publicando a PyPl</h3>
 <p>Para publicar nuestro paquete de python, primero utilizamos <code>uv build --wheel</code> que construye el paquete en formato wheel, optimizado para la distribución. </p>
 <p>Luego, con <code>uv pip install build twine</code> instalamos las herramientas necesarias: </p>
