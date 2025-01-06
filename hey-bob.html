@@ -88,8 +88,11 @@
 <h2>Cómo lo hice?</h2>
 <p>Dicen que todo buen proyecto nace como un paquete de python. Para crear mi propio paquete del gran Bob quise usar la librería de python <code>uv</code>. Su promesa es que reemplaza a <code>pip</code>, <code>poetry</code> entre otras, y que administra las librerías mucho más rápido (usa Rust). Más sobre <code>uv</code> y de cómo instalarlo <a href="https://github.com/astral-sh/uv">acá</a>.</p>
 <h3>Estructura de la librería</h3>
+<p>Necesitamos hacer dos cosas:
+- Crear una <strong>estructura de directorios</strong> y archivos
+- Crear un <strong>ambiente de python</strong></p>
 <p>Una vez instalado <code>uv</code>, podemos ir al lugar donde queremos crear nuestro paquete y escribir en la terminal:</p>
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code>uv<span style="color: #bbbbbb"> </span>init<span style="color: #bbbbbb"> </span>hey-bob<span style="color: #bbbbbb"> </span>--python<span style="color: #bbbbbb"> </span><span style="color: #40a070">3</span>.8<span style="color: #bbbbbb"> </span>--package
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code>uv<span style="color: #BBB"> </span>init<span style="color: #BBB"> </span>hey-bob<span style="color: #BBB"> </span>--python<span style="color: #BBB"> </span><span style="color: #40A070">3</span>.8<span style="color: #BBB"> </span>--package
 </code></pre></div>
 
 <p>Con esto le estoy diciendo a <code>uv</code> que quiero inicializar un proyecto que se llama <code>hey-bob</code>, que usa al menos la versión 3.8 de python, y que quiero que tenga la estructura de un paquete de python. El <em>tree</em> del proyecto se ve así:</p>
@@ -102,22 +105,22 @@
 
 <p>Buenísima! Ahora veamos qué hay dentro de <code>pyproject.toml</code>.</p>
 <div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code><span style="color: #007020; font-weight: bold">[project]</span>
-<span style="color: #4070a0">name</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">&quot;hey-bob&quot;</span>
-<span style="color: #4070a0">version</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">&quot;0.1.0&quot;</span>
-<span style="color: #4070a0">description</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">&quot;Add your description here&quot;</span>
-<span style="color: #4070a0">readme</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">&quot;README.md&quot;</span>
-<span style="color: #4070a0">authors</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">[</span>
-<span style="color: #bbbbbb">    </span><span style="color: #4070a0">{ name</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">&quot;rafasacaan&quot;, email = &quot;rafasacaan@gmail.com&quot; }</span>
-<span style="color: #4070a0">]</span>
-<span style="color: #4070a0">requires-python</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">&quot;&gt;=3.8&quot;</span>
-<span style="color: #4070a0">dependencies</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">[]</span>
+<span style="color: #4070A0">name</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #4070A0">&quot;hey-bob&quot;</span>
+<span style="color: #4070A0">version = &quot;0.1.0&quot;</span>
+<span style="color: #4070A0">description = &quot;Add your description here&quot;</span>
+<span style="color: #4070A0">readme = &quot;README.md&quot;</span>
+<span style="border: 1px solid #F00">authors = [</span>
+<span style="color: #BBB">    </span><span style="color: #4070A0">{ name</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #4070A0">&quot;rafasacaan&quot;, email = &quot;rafasacaan@gmail.com&quot;</span><span style="color: #BBB"> </span><span style="border: 1px solid #F00">}</span>
+<span style="color: #4070A0">]</span>
+<span style="color: #4070A0">requires-python</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #4070A0">&quot;&gt;=3.8&quot;</span>
+<span style="border: 1px solid #F00">dependencies = []</span>
 
 <span style="color: #007020; font-weight: bold">[project.scripts]</span>
-<span style="color: #4070a0">hey-bob</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">&quot;hey_bob:main&quot;</span>
+<span style="color: #4070A0">hey-bob</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #4070A0">&quot;hey_bob:main&quot;</span>
 
-<span style="color: #007020; font-weight: bold">[build-system]</span>
-<span style="color: #4070a0">requires</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">[&quot;hatchling&quot;]</span>
-<span style="color: #4070a0">build-backend</span><span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #4070a0">&quot;hatchling.build&quot;</span>
+<span style="border: 1px solid #F00">[build-system]</span>
+<span style="color: #4070A0">requires</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #4070A0">[&quot;hatchling&quot;]</span>
+<span style="color: #4070A0">build-backend</span><span style="color: #BBB"> </span><span style="color: #666">=</span><span style="color: #BBB"> </span><span style="color: #4070A0">&quot;hatchling.build&quot;</span>
 </code></pre></div>
 
 <p>Vemos que tenemos info sobre nuestro proyecto, así como un entry point en <code>hey_bob:main</code>.</p>
@@ -138,99 +141,99 @@
 <p>Qué mejor fuente de <em>datasets</em> que kaggle. Encontré ahí un <a href="https://www.kaggle.com/datasets/cloudy17/bob-dylan-songs">dataset</a> con muchísimas letras de las canciones de Bob entre 1961 y el 2020. </p>
 <p>Guardé el <em>.csv</em> dentro de <code>src/hey-bob/data</code> y creé un script de python en <code>src/hey-bob/services.py</code> donde vivirán las funciones principales de la librería.</p>
 <p>Pero antes, necesito un jupyter notebook para jugar con los datos y crear una buena función. Para esto instalamos <em>jupyter</em> en modalidad dev:</p>
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code>uv<span style="color: #bbbbbb"> </span>add<span style="color: #bbbbbb"> </span>jupyter<span style="color: #bbbbbb"> </span>--dev
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code>uv<span style="color: #BBB"> </span>add<span style="color: #BBB"> </span>jupyter<span style="color: #BBB"> </span>--dev
 </code></pre></div>
 
 <p>Después de jugar un rato en el jupyter notebook, creé las siguientes funciones:</p>
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code><span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">pandas</span> <span style="color: #007020; font-weight: bold">as</span> <span style="color: #0e84b5; font-weight: bold">pd</span>
-<span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">random</span>
-<span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">pathlib</span> <span style="color: #007020; font-weight: bold">import</span> Path
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code><span style="color: #007020; font-weight: bold">import</span><span style="color: #BBB"> </span><span style="color: #0E84B5; font-weight: bold">pandas</span><span style="color: #BBB"> </span><span style="color: #007020; font-weight: bold">as</span><span style="color: #BBB"> </span><span style="color: #0E84B5; font-weight: bold">pd</span>
+<span style="color: #007020; font-weight: bold">import</span><span style="color: #BBB"> </span><span style="color: #0E84B5; font-weight: bold">random</span>
+<span style="color: #007020; font-weight: bold">from</span><span style="color: #BBB"> </span><span style="color: #0E84B5; font-weight: bold">pathlib</span><span style="color: #BBB"> </span><span style="color: #007020; font-weight: bold">import</span> Path
 
-<span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">load_pickle</span>():
-    current_dir <span style="color: #666666">=</span> Path(<span style="color: #bb60d5">__file__</span>)<span style="color: #666666">.</span>parent
-    data_file <span style="color: #666666">=</span> current_dir <span style="color: #666666">/</span> <span style="color: #4070a0">&#39;data&#39;</span> <span style="color: #666666">/</span> <span style="color: #4070a0">&#39;lyrics.csv&#39;</span>
+<span style="color: #007020; font-weight: bold">def</span><span style="color: #BBB"> </span><span style="color: #06287E">load_pickle</span>():
+    current_dir <span style="color: #666">=</span> Path(<span style="color: #BB60D5">__file__</span>)<span style="color: #666">.</span>parent
+    data_file <span style="color: #666">=</span> current_dir <span style="color: #666">/</span> <span style="color: #4070A0">&#39;data&#39;</span> <span style="color: #666">/</span> <span style="color: #4070A0">&#39;lyrics.csv&#39;</span>
 
-    <span style="color: #007020; font-weight: bold">if</span> <span style="color: #007020; font-weight: bold">not</span> data_file<span style="color: #666666">.</span>exists():
-        <span style="color: #007020; font-weight: bold">raise</span> <span style="color: #007020">FileNotFoundError</span>(<span style="color: #4070a0">f&quot;Could not find data file at </span><span style="color: #70a0d0; font-style: italic">{</span>data_file<span style="color: #70a0d0; font-style: italic">}</span><span style="color: #4070a0">&quot;</span>)
+    <span style="color: #007020; font-weight: bold">if</span> <span style="color: #007020; font-weight: bold">not</span> data_file<span style="color: #666">.</span>exists():
+        <span style="color: #007020; font-weight: bold">raise</span> <span style="color: #007020">FileNotFoundError</span>(<span style="color: #4070A0">f&quot;Could not find data file at </span><span style="color: #70A0D0; font-style: italic">{</span>data_file<span style="color: #70A0D0; font-style: italic">}</span><span style="color: #4070A0">&quot;</span>)
 
-    <span style="color: #007020; font-weight: bold">return</span> pd<span style="color: #666666">.</span>read_pickle(data_file)
+    <span style="color: #007020; font-weight: bold">return</span> pd<span style="color: #666">.</span>read_pickle(data_file)
 
 
 
-<span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">get_random_lyrics</span>(df, year<span style="color: #666666">=</span><span style="color: #007020; font-weight: bold">None</span>):
+<span style="color: #007020; font-weight: bold">def</span><span style="color: #BBB"> </span><span style="color: #06287E">get_random_lyrics</span>(df, year<span style="color: #666">=</span><span style="color: #007020; font-weight: bold">None</span>):
 
     <span style="color: #007020; font-weight: bold">if</span> year <span style="color: #007020; font-weight: bold">is</span> <span style="color: #007020; font-weight: bold">not</span> <span style="color: #007020; font-weight: bold">None</span>:
-        available_years <span style="color: #666666">=</span> <span style="color: #007020">sorted</span>(df[<span style="color: #4070a0">&#39;release_year&#39;</span>]<span style="color: #666666">.</span>unique())
+        available_years <span style="color: #666">=</span> <span style="color: #007020">sorted</span>(df[<span style="color: #4070A0">&#39;release_year&#39;</span>]<span style="color: #666">.</span>unique())
 
         <span style="color: #007020; font-weight: bold">if</span> year <span style="color: #007020; font-weight: bold">not</span> <span style="color: #007020; font-weight: bold">in</span> available_years:
-            closest_year <span style="color: #666666">=</span> <span style="color: #007020">min</span>(available_years, key<span style="color: #666666">=</span><span style="color: #007020; font-weight: bold">lambda</span> x: <span style="color: #007020">abs</span>(x <span style="color: #666666">-</span> year))
-            filtered_df <span style="color: #666666">=</span> df[df[<span style="color: #4070a0">&#39;release_year&#39;</span>] <span style="color: #666666">==</span> closest_year]
+            closest_year <span style="color: #666">=</span> <span style="color: #007020">min</span>(available_years, key<span style="color: #666">=</span><span style="color: #007020; font-weight: bold">lambda</span> x: <span style="color: #007020">abs</span>(x <span style="color: #666">-</span> year))
+            filtered_df <span style="color: #666">=</span> df[df[<span style="color: #4070A0">&#39;release_year&#39;</span>] <span style="color: #666">==</span> closest_year]
         <span style="color: #007020; font-weight: bold">else</span>:
-            filtered_df <span style="color: #666666">=</span> df[df[<span style="color: #4070a0">&#39;release_year&#39;</span>] <span style="color: #666666">==</span> year]
+            filtered_df <span style="color: #666">=</span> df[df[<span style="color: #4070A0">&#39;release_year&#39;</span>] <span style="color: #666">==</span> year]
     <span style="color: #007020; font-weight: bold">else</span>:
-        filtered_df <span style="color: #666666">=</span> df
-        selected_song <span style="color: #666666">=</span> filtered_df<span style="color: #666666">.</span>sample(n<span style="color: #666666">=</span><span style="color: #40a070">1</span>)<span style="color: #666666">.</span>iloc[<span style="color: #40a070">0</span>]
+        filtered_df <span style="color: #666">=</span> df
+        selected_song <span style="color: #666">=</span> filtered_df<span style="color: #666">.</span>sample(n<span style="color: #666">=</span><span style="color: #40A070">1</span>)<span style="color: #666">.</span>iloc[<span style="color: #40A070">0</span>]
 
 
-    <span style="color: #60a0b0; font-style: italic"># Extract song data</span>
-    song_name, song_year <span style="color: #666666">=</span> selected_song<span style="color: #666666">.</span>title, selected_song<span style="color: #666666">.</span>release_year
+    <span style="color: #60A0B0; font-style: italic"># Extract song data</span>
+    song_name, song_year <span style="color: #666">=</span> selected_song<span style="color: #666">.</span>title, selected_song<span style="color: #666">.</span>release_year
 
-    <span style="color: #60a0b0; font-style: italic"># Split into lines</span>
-    lines <span style="color: #666666">=</span> [line<span style="color: #666666">.</span>strip() <span style="color: #007020; font-weight: bold">for</span> line <span style="color: #007020; font-weight: bold">in</span> selected_song[<span style="color: #4070a0">&#39;lyrics&#39;</span>]<span style="color: #666666">.</span>split(<span style="color: #4070a0">&#39;</span><span style="color: #4070a0; font-weight: bold">\n</span><span style="color: #4070a0">&#39;</span>) <span style="color: #007020; font-weight: bold">if</span> line<span style="color: #666666">.</span>strip()]
+    <span style="color: #60A0B0; font-style: italic"># Split into lines</span>
+    lines <span style="color: #666">=</span> [line<span style="color: #666">.</span>strip() <span style="color: #007020; font-weight: bold">for</span> line <span style="color: #007020; font-weight: bold">in</span> selected_song[<span style="color: #4070A0">&#39;lyrics&#39;</span>]<span style="color: #666">.</span>split(<span style="color: #4070A0">&#39;</span><span style="color: #4070A0; font-weight: bold">\n</span><span style="color: #4070A0">&#39;</span>) <span style="color: #007020; font-weight: bold">if</span> line<span style="color: #666">.</span>strip()]
 
-    <span style="color: #60a0b0; font-style: italic"># Select a random starting point</span>
-    start_index <span style="color: #666666">=</span> random<span style="color: #666666">.</span>randint(<span style="color: #40a070">0</span>, <span style="color: #007020">max</span>(<span style="color: #40a070">0</span>, <span style="color: #007020">len</span>(lines) <span style="color: #666666">-</span> <span style="color: #40a070">4</span>))
+    <span style="color: #60A0B0; font-style: italic"># Select a random starting point</span>
+    start_index <span style="color: #666">=</span> random<span style="color: #666">.</span>randint(<span style="color: #40A070">0</span>, <span style="color: #007020">max</span>(<span style="color: #40A070">0</span>, <span style="color: #007020">len</span>(lines) <span style="color: #666">-</span> <span style="color: #40A070">4</span>))
 
-    <span style="color: #60a0b0; font-style: italic"># Get up to 4 consecutive lines</span>
-    selected_lines <span style="color: #666666">=</span> lines[start_index:start_index <span style="color: #666666">+</span> <span style="color: #40a070">4</span>]
+    <span style="color: #60A0B0; font-style: italic"># Get up to 4 consecutive lines</span>
+    selected_lines <span style="color: #666">=</span> lines[start_index:start_index <span style="color: #666">+</span> <span style="color: #40A070">4</span>]
 
-    <span style="color: #60a0b0; font-style: italic"># Join the lines with newlines</span>
-    selected_text <span style="color: #666666">=</span> <span style="color: #4070a0">&#39;</span><span style="color: #4070a0; font-weight: bold">\n</span><span style="color: #4070a0">&#39;</span><span style="color: #666666">.</span>join(selected_lines)
+    <span style="color: #60A0B0; font-style: italic"># Join the lines with newlines</span>
+    selected_text <span style="color: #666">=</span> <span style="color: #4070A0">&#39;</span><span style="color: #4070A0; font-weight: bold">\n</span><span style="color: #4070A0">&#39;</span><span style="color: #666">.</span>join(selected_lines)
 
     <span style="color: #007020; font-weight: bold">return</span> song_name, song_year, selected_text
 </code></pre></div>
 
 <p>Tenemos que indicarle a nuestro paquete las funciones que queremos disponibilizar. Esto lo hacemos en <code>__init__.py</code></p>
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code><span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">.services</span> <span style="color: #007020; font-weight: bold">import</span> get_random_lyrics, load_pickle
-<span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">.__main__</span> <span style="color: #007020; font-weight: bold">import</span> main
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code><span style="color: #007020; font-weight: bold">from</span><span style="color: #BBB"> </span><span style="color: #0E84B5; font-weight: bold">.services</span><span style="color: #BBB"> </span><span style="color: #007020; font-weight: bold">import</span> get_random_lyrics, load_pickle
+<span style="color: #007020; font-weight: bold">from</span><span style="color: #BBB"> </span><span style="color: #0E84B5; font-weight: bold">.__main__</span><span style="color: #BBB"> </span><span style="color: #007020; font-weight: bold">import</span> main
 
-__all__ <span style="color: #666666">=</span> [<span style="color: #4070a0">&#39;get_random_lyrics&#39;</span>, <span style="color: #4070a0">&#39;load_pickle&#39;</span>]
+__all__ <span style="color: #666">=</span> [<span style="color: #4070A0">&#39;get_random_lyrics&#39;</span>, <span style="color: #4070A0">&#39;load_pickle&#39;</span>]
 </code></pre></div>
 
 <p>Y también crear nuestro archivo <code>__main__.py</code>.</p>
-<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code><span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">argparse</span>
-<span style="color: #007020; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">.services</span> <span style="color: #007020; font-weight: bold">import</span> get_random_lyrics, load_pickle
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><code><span style="color: #007020; font-weight: bold">import</span><span style="color: #BBB"> </span><span style="color: #0E84B5; font-weight: bold">argparse</span>
+<span style="color: #007020; font-weight: bold">from</span><span style="color: #BBB"> </span><span style="color: #0E84B5; font-weight: bold">.services</span><span style="color: #BBB"> </span><span style="color: #007020; font-weight: bold">import</span> get_random_lyrics, load_pickle
 
-<span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">main</span>():
-    parser <span style="color: #666666">=</span> argparse<span style="color: #666666">.</span>ArgumentParser(description<span style="color: #666666">=</span><span style="color: #4070a0">&#39;Get random song lyrics&#39;</span>)
-    parser<span style="color: #666666">.</span>add_argument(<span style="color: #4070a0">&#39;--year&#39;</span>, <span style="color: #007020">type</span><span style="color: #666666">=</span><span style="color: #007020">int</span>, help<span style="color: #666666">=</span><span style="color: #4070a0">&#39;Specific year to get lyrics from (optional)&#39;</span>, default<span style="color: #666666">=</span><span style="color: #007020; font-weight: bold">None</span>)
+<span style="color: #007020; font-weight: bold">def</span><span style="color: #BBB"> </span><span style="color: #06287E">main</span>():
+    parser <span style="color: #666">=</span> argparse<span style="color: #666">.</span>ArgumentParser(description<span style="color: #666">=</span><span style="color: #4070A0">&#39;Get random song lyrics&#39;</span>)
+    parser<span style="color: #666">.</span>add_argument(<span style="color: #4070A0">&#39;--year&#39;</span>, <span style="color: #007020">type</span><span style="color: #666">=</span><span style="color: #007020">int</span>, help<span style="color: #666">=</span><span style="color: #4070A0">&#39;Specific year to get lyrics from (optional)&#39;</span>, default<span style="color: #666">=</span><span style="color: #007020; font-weight: bold">None</span>)
 
-    args <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>parse_args()
+    args <span style="color: #666">=</span> parser<span style="color: #666">.</span>parse_args()
 
     <span style="color: #007020; font-weight: bold">try</span>:
-        <span style="color: #60a0b0; font-style: italic"># Load the data first</span>
-        df <span style="color: #666666">=</span> load_pickle()
+        <span style="color: #60A0B0; font-style: italic"># Load the data first</span>
+        df <span style="color: #666">=</span> load_pickle()
 
-        <span style="color: #60a0b0; font-style: italic"># Get random verse</span>
-        song_name, song_year, text <span style="color: #666666">=</span> get_random_lyrics(df, year<span style="color: #666666">=</span>args<span style="color: #666666">.</span>year)
+        <span style="color: #60A0B0; font-style: italic"># Get random verse</span>
+        song_name, song_year, text <span style="color: #666">=</span> get_random_lyrics(df, year<span style="color: #666">=</span>args<span style="color: #666">.</span>year)
 
-        <span style="color: #60a0b0; font-style: italic"># Print with formatting</span>
-        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot; &quot;</span>)
+        <span style="color: #60A0B0; font-style: italic"># Print with formatting</span>
+        <span style="color: #007020">print</span>(<span style="color: #4070A0">&quot; &quot;</span>)
         <span style="color: #007020">print</span>(text)
-        <span style="color: #007020">print</span>(<span style="color: #4070a0">f&quot;- &#39;</span><span style="color: #70a0d0; font-style: italic">{</span>song_name<span style="color: #70a0d0; font-style: italic">}</span><span style="color: #4070a0">&#39;, </span><span style="color: #70a0d0; font-style: italic">{</span>song_year<span style="color: #70a0d0; font-style: italic">}</span><span style="color: #4070a0"> - Bob Dylan&quot;</span>)
-        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot; &quot;</span>)
-        <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40a070">0</span>
+        <span style="color: #007020">print</span>(<span style="color: #4070A0">f&quot;- &#39;</span><span style="color: #70A0D0; font-style: italic">{</span>song_name<span style="color: #70A0D0; font-style: italic">}</span><span style="color: #4070A0">&#39;, </span><span style="color: #70A0D0; font-style: italic">{</span>song_year<span style="color: #70A0D0; font-style: italic">}</span><span style="color: #4070A0"> - Bob Dylan&quot;</span>)
+        <span style="color: #007020">print</span>(<span style="color: #4070A0">&quot; &quot;</span>)
+        <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40A070">0</span>
 
     <span style="color: #007020; font-weight: bold">except</span> <span style="color: #007020">FileNotFoundError</span>:
-        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;Error: Could not find the lyrics data file.&quot;</span>)
-        <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40a070">1</span>
+        <span style="color: #007020">print</span>(<span style="color: #4070A0">&quot;Error: Could not find the lyrics data file.&quot;</span>)
+        <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40A070">1</span>
 
     <span style="color: #007020; font-weight: bold">except</span> <span style="color: #007020">Exception</span> <span style="color: #007020; font-weight: bold">as</span> e:
-        <span style="color: #007020">print</span>(<span style="color: #4070a0">f&quot;Error: </span><span style="color: #70a0d0; font-style: italic">{</span><span style="color: #007020">str</span>(e)<span style="color: #70a0d0; font-style: italic">}</span><span style="color: #4070a0">&quot;</span>)
-    <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40a070">1</span>
+        <span style="color: #007020">print</span>(<span style="color: #4070A0">f&quot;Error: </span><span style="color: #70A0D0; font-style: italic">{</span><span style="color: #007020">str</span>(e)<span style="color: #70A0D0; font-style: italic">}</span><span style="color: #4070A0">&quot;</span>)
+    <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40A070">1</span>
 
 
-<span style="color: #007020; font-weight: bold">if</span> <span style="color: #bb60d5">__name__</span> <span style="color: #666666">==</span> <span style="color: #4070a0">&#39;__main__&#39;</span>:
+<span style="color: #007020; font-weight: bold">if</span> <span style="color: #BB60D5">__name__</span> <span style="color: #666">==</span> <span style="color: #4070A0">&#39;__main__&#39;</span>:
     exit(main())
 </code></pre></div>
 
