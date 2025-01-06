@@ -15,6 +15,11 @@ En este post te cuento cómo lo hice.
 Dicen que todo buen proyecto nace como un paquete de python. Para crear mi propio paquete del gran Bob quise usar la librería de python `uv`. Su promesa es que reemplaza a `pip`, `poetry` entre otras, y que administra las librerías mucho más rápido (usa Rust). Más sobre `uv` y de cómo instalarlo [acá](https://github.com/astral-sh/uv).
 
 ### Estructura de la librería
+
+Necesitamos hacer dos cosas:
+- Crear una **estructura de directorios** y archivos
+- Crear un **ambiente de python**
+
 Una vez instalado `uv`, podemos ir al lugar donde queremos crear nuestro paquete y escribir en la terminal:
 
 ```bash
