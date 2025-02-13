@@ -1,0 +1,3 @@
+# Blog
+
+A notebook, really.

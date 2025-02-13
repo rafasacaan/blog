@@ -1,0 +1,18 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS folder attributes
+Icon?
+._*
+
+# macOS Thumbnails
+Thumbs.db
+
+# macOS Trash folder which might appear in some cases
+.Trashes
+
+# Hugo artifacts
+.hugo_build.lock
+public
