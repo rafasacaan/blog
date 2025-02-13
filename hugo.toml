@@ -16,7 +16,7 @@ description = "Un blog... un cuaderno, en realidad."
 
 # Appearance settings
 theme = 'auto'
-colorPalette = 'default'
+colorPalette = 'base16-mocha'
 hideHeader = false
 
 # Intro on main page, content is markdown
