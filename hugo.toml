@@ -23,9 +23,8 @@ hideHeader = false
 #homeIntroTitle = 'Hola!'
 homeIntroContent = """
 Soy Rafa de 🇨🇱, ingeniero eléctrico que se encantó con los algoritmos y que hoy trabajo como data scientist.\n 
-Estoy interesado en registrar ejercicios en pos de eliminar el ruido entre los problemas del mundo real y las herramientas que usamos.\n
-Me gustan los problemas complejos, pero me gustan mucho más las historias y las soluciones simples.\n
-Estoy interesado en temas como la estadística y la economía, la simulación y la optimización... y tal vez algún algoritmo de ML/AI si es que le quitamos el hype.\n
+Me gustan los problemas complejos pero me gustan mucho más las historias, y las soluciones simples y elegantes.\n
+Este blog es para registrar notas de cosas que me han funcionado y quiero aprender. Espero que libres de hype.\n
 """
 
 # Collection to display on home
