@@ -50,7 +50,22 @@ Primero, necesitamos entender **a quién** estamos ayudando.
 No es la organización, no es el stakeholder, no es el champion. Encontremos quién es! Preguntémosle su nombre, conozcámoslo, conversemos con esa persona. Acompañémoslo una mañana entera. Seamos su sicólogo por un rato, y entendamos los dolores que tiene, y también sus éxitos. Imaginemos se llama Roberto.
 
 Si nos preguntan qué estamos haciendo, nuestra respuesta nunca puede ser: "Estoy construyendo un modelo de _churn_". En realidad estamos 
-ayudando a identificar usuarios en riesgo de irse de la compañia, a los cuáles queremos intentar retener. Eso se _puede_ hacer con un modelo. Pero también se puede hacer de mil formas más. También necesitamos encontrar una forma en que Roberto pueda interactuar con _la cosa_. También
+ayudando a identificar usuarios en riesgo de irse de la compañia, a los cuáles queremos intentar retener. Eso se _puede_ hacer con un modelo de _churn_. Pero también se puede hacer de mil formas más. También necesitamos encontrar una forma en que Roberto pueda interactuar con _la cosa_. También
 necesitamos integrar _la cosa_ con los sistemas de Roberto. También necesitamos que Roberto tal vez puede identificar fallas de _la cosa_, 
 para que esta pueda evolucionar en el tiempo, y construir sobre ella. 
+
+Esta lista de cosas es bastante más que sólo un modelo de _churn_, y ayuda a hacer el _mind shift_ de producto que buscamos.
+
+En resumen, algunas preguntas importantes acá son:
+- ¿Quién usará esta herramienta y cómo?
+- ¿Qué decisiones mejorarían si tuvieramos mejores _data insights_?
+- ¿Cómo se vería un escenario de éxito para el usuario?
+
+Segundo, diseñemos **métricas** correctas para medir el éxito. Más que reportar que _la cosa_ tiene un accuracy del 92%, midamos en qué porcentaje estamos mejorando el _churn_, o cuál es el porcentaje de _churn_ mensual que buscamos/medimos.
+
+## Diseñando la solución
+
+
+
+
 
