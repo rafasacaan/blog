@@ -1,3 +1,3 @@
 # Blog
 
-A notebook, really.
+My personal webpage and blog.

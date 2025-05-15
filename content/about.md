@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: "Hola."
-hideBackToTop: false
+hideBackToTop: true
 hidePagination: true
 ---
 

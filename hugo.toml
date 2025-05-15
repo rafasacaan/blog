@@ -22,14 +22,18 @@ hideHeader = false
 # Intro on main page, content is markdown
 #homeIntroTitle = 'Hola!'
 homeIntroContent = """
-Soy Rafa de 🇨🇱, ingeniero eléctrico que se encantó con los algoritmos y que hoy trabajo como data scientist.\n 
-Me gustan los problemas complejos pero me gustan mucho más las historias, y las soluciones simples y elegantes.\n
-Este blog es para registrar notas de cosas que me han funcionado y quiero aprender. Espero que libres de hype.\n
+Hola, soy rafa de Chile🇨🇱. \n
+Me obsesiona la idea de que la tecnología pueda ayudarnos a **encontrarnos a nosotros mismos**.
+Algo así como usar la tecnología para des-tecnologizarnos y encontrar nuestro yo más auténtico.
+Me gusta crear apps para investigar esto.\n
+
+Soy fanático de la música, sobre todo si está grabada en alguna maquinita digital o análoga antigua. También me gustan mucho la literatura y las fotos.
+Me encantan los objetos y las cosas, especialmente las que nos evocan algo.\n
 """
 
 # Collection to display on home
-homeCollectionTitle = 'Posts'
-homeCollection = 'posts'
+# homeCollectionTitle = 'apps'
+# homeCollection = 'apps'
 
 # Lists parameters
 paginationSize = 100
@@ -44,10 +48,6 @@ breadcrumbs = true
 name = "linkedin"
 url = "https://www.linkedin.com/in/rafaelsacaanamunategui/"
 
-# [[params.social]]
-# name = "medium"
-# url = "https://medium.com/@user"
-
 [[params.social]]
 name = "github"
 url = "https://github.com/rafasacaan"
@@ -56,6 +56,11 @@ url = "https://github.com/rafasacaan"
 [[params.menu]]
 name = "home"
 url = "/"
+
+[[params.menu]]
+name = "apps"
+url = "/apps"
+
 
 [[params.menu]]
 name = "posts"
@@ -79,4 +84,3 @@ category = "General"
 categoryid = "categoryId"
 mapping = "pathname"
 theme = "preferred_color_scheme"
-
