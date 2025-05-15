@@ -3,6 +3,7 @@ baseURL = 'https://www.rafasacaan.com/'
 languageCode = 'en-us'
 title = 'rafa sacaan'
 theme = 'typo'
+publishDir = "docs"
 
 # Google analytics code
 googleAnalytics = "G-xxxxxxxxx"

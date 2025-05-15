@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on rafa sacaan</title>
+    <link>https://www.rafasacaan.com/tags/</link>
+    <description>Recent content in Tags on rafa sacaan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.rafasacaan.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Productos</title>
+      <link>https://www.rafasacaan.com/tags/productos/</link>
+      <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.rafasacaan.com/tags/productos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Package</title>
+      <link>https://www.rafasacaan.com/tags/package/</link>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.rafasacaan.com/tags/package/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://www.rafasacaan.com/tags/python/</link>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.rafasacaan.com/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>https://www.rafasacaan.com/tags/tutorial/</link>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.rafasacaan.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

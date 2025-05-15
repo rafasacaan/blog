@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="https://www.rafasacaan.com//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.rafasacaan.com//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.rafasacaan.com//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.rafasacaan.com//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.rafasacaan.com//apple-touch-icon.png">
+
+<meta name="description" content="Re-pensar todo proyecto de data science como un producto nos va a mantener siempre cerca del impacto."/>
+
+
+
+<title>
+    
+    Data science como producto | rafa sacaan
+    
+</title>
+
+<link rel="canonical" href="https://www.rafasacaan.com/posts/product-mindset/"/>
+
+<meta property="og:url" content="https://www.rafasacaan.com/posts/product-mindset/">
+  <meta property="og:site_name" content="rafa sacaan">
+  <meta property="og:title" content="Data science como producto">
+  <meta property="og:description" content="Re-pensar todo proyecto de data science como un producto nos va a mantener siempre cerca del impacto.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-04T00:00:00+00:00">
+    <meta property="article:tag" content="Productos">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.c43235edceff31044f3132ea67f3c9fd8174f7efd33cb35db7c4b75fc3db8912.css" media="all">
+
+
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-xxxxxxxxx"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-xxxxxxxxx');
+        }
+      </script>
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="https://www.rafasacaan.com/">rafa sacaan</a>
+    </h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/apps" >
+                /apps
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/posts/product-mindset/">Data science como producto</a>
+</div>
+
+
+
+<div  class="autonumber" >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Data science como producto</h1>
+    
+    <p class="single-summary">Una guía corta para desarrollar data science desde un approach de producto</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2025-03-04T00:00:00&#43;00:00">March 4, 2025</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      8 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div class="single-content">
+    <p>He desarrollado una buena cantidad de proyectos de data science, y pucha que fácil es diverger del camino que nos lleva al éxito.
+¿Cuál es ese éxito te preguntarás? Un clásico, agregar valor. No importa cómo, pero que lo que se estaba haciendo antes de alguna forma,
+ahora se esté haciendo mejor, y que eso traiga consecuencias positivas al entorno
+(eg. aumentando eficiencia usemos menos recursos, o usemos mejor los recursos que ya tenemos).</p>
+<p>De esto ya se ha escrito bastante, pero quería registrarlo a mí manera, sin inspirarme en ningún otro artículo. Creo que eso le agrega <em>ortogonalidad</em> al tema y a la web.</p>
+<p>Suena fácil, pero aparte de la solución en sí misma,
+hay que acordarse que adoptar mecanismos que no entendemos es re difícil. No queremos hacerlo, no queremos sufrir de más. Es como tener que disparar
+esas super pistolas de <em>Men in Black</em>: prefiero mil veces una menos colorinche y con menos berrinche pero que haga la pega y no me falle. También
+hay personas que prefieren de primera las pistolas de <em>Men in Black</em> y podrían decir: &ldquo;<em>qué tipo conservador! vamos por lo más coool</em>&rdquo;. Y eso está bien.
+Disparar un rato esas pistolas y jugar con ellas puede ser bacán. Pero ¿me llevaría una de esas tremendas cosas a una pelea real? Tal vez sí, si fueran
+más livianas, si las supiera arreglar yo sólo, si fueran un poco más chicas. Por eso acá digo: lleguemos hasta allá construyendo desde lo más simple, y pensemos
+como si fuesemos ese usuario final.</p>
+<p>Para no generalizar hablaré por mí. En estos casos, mi mayor enemigo es <em>la complejidad</em>. Pareciera que mientras algo es más complejo, es mejor.
+Para mi, la complejidad por sí misma sostiene cierta belleza que me atrae e hipnotiza un poco. Es <em>sexy</em>. Pero la verdad, es que la complejidad no
+se sostiene por sí sola, y hay que llamarla cuando se le necesita.</p>
+<p>Por otro lado, existe como cierta verguenza a mostrar cosas simples que funcionan. Es como si uno quedara expuesto al <em>trolleo</em> público
+de otro que lo puede hacer mejor. Hoy en día, padecemos de este mal en que todos los ejercicios los transformamos en una competencia. Prefiero
+no caer en eso, y hacer cosas simples sin verguenza.</p>
+<p>Ahora, si la <em>cosa</em> simple no alcanza, claro&hellip; hay que llamar a la señora <em>complejidad</em>.</p>
+<h2 class="heading" id="introducción">
+  Introducción
+  <a class="anchor" href="#introducci%c3%b3n">#</a>
+</h2>
+<p>El objetivo es lograr cambiar nuestro <em>approach</em>:</p>
+<ul>
+<li><strong>&ldquo;simplemente resolver problemas técnicos&rdquo;</strong> ❌</li>
+<li><strong>&ldquo;crear productos que entreguen valor real&rdquo;</strong> ✅</li>
+</ul>
+<p>Pensando como un <em>product developer</em> desde el día uno podremos <strong>conectar</strong> nuestro trabajo directamente con las necesidades de un usuario (para hacerlo más real y acentuar las ganas que tenemos de generar impacto, entiéndase mejor como las necesidades de una <em>persona</em>).</p>
+<h2 class="heading" id="descubriendo-el-problema">
+  Descubriendo el problema
+  <a class="anchor" href="#descubriendo-el-problema">#</a>
+</h2>
+<p>Primero, necesitamos entender <strong>a quién</strong> estamos ayudando.</p>
+<p>No es la organización, no es el stakeholder, no es el champion. Encontremos quién es! Preguntémosle su nombre, conozcámoslo, conversemos con esa persona. Acompañémoslo una mañana entera. Seamos su sicólogo por un rato, y entendamos los dolores que tiene, y también sus éxitos. Imaginemos que se llama Roberto.</p>
+<p>Si nos preguntan qué estamos haciendo, nuestra respuesta nunca puede ser: &ldquo;Estoy construyendo un modelo de <em>churn</em>&rdquo;. En realidad estamos
+ayudando a Roberto. Estamos ayudando a identificar usuarios en riesgo de irse de la compañia, a los cuáles queremos intentar retener. Eso se <em>puede</em> hacer con un modelo de <em>churn</em>. Pero también se puede hacer de mil formas más. También necesitamos encontrar una forma en que Roberto pueda interactuar con <em>la cosa</em>. También
+necesitamos integrar <em>la cosa</em> con los sistemas de Roberto. También necesitamos que Roberto tal vez puede identificar fallas de <em>la cosa</em>,
+para que esta pueda evolucionar en el tiempo, y construir sobre ella.</p>
+<p>Esta lista de cosas son bastante más que sólo un modelo de <em>churn</em>, y ayuda a hacer el <em>mind shift</em> de producto que buscamos.</p>
+<p>En resumen, algunas preguntas importantes acá son:</p>
+<ul>
+<li>¿Quién usará esta herramienta y cómo?</li>
+<li>¿Qué decisiones mejorarían si tuvieramos mejores <em>data insights</em>?</li>
+<li>¿Cómo se vería un escenario de éxito para el usuario?</li>
+</ul>
+<p>Segundo, diseñemos <strong>métricas</strong> correctas para medir el éxito.</p>
+<p>Más que reportar que <em>la cosa</em> tiene un accuracy del 92%, midamos en qué porcentaje estamos mejorando el <em>churn</em>, y cuál es el porcentaje de <em>churn</em> mensual que buscamos/medimos.</p>
+<h2 class="heading" id="diseñando-la-solución">
+  Diseñando la solución
+  <a class="anchor" href="#dise%c3%b1ando-la-soluci%c3%b3n">#</a>
+</h2>
+<p>Una vez identificado el problema y el usuario, dibujemos (sí, literalmente) la navegación o el <strong><em>journey</em> de ese usuario</strong> a través de <em>la cosa</em>, de principio a fin.</p>
+<p>Por ejemplo, <em>&ldquo;Roberto abre su dashboard el lunes a.m. y ve una lista priorizada de cuentas, cada una con sus factores de riesgos subrayados&rdquo;.</em>
+Necesitamos entonces sentarnos a dibujar estos recorridos y representarlos a través de frases simples. El objetivo es <strong>tener una colección de frases que construyan e viaje</strong>, y entender que esto no lo hacemos solos ni para nosotros, sino que para ayudar a Roberto. Pregúntemosle a Roberto si este viaje le parece y qué comentarios tiene. Y los consideramos, e iteramos.</p>
+<p>El enemigo acá se llama <em>ansiedad</em>. No queremos resolver toda de una sola vez. No queremos viajes que sean como árboles con ramas y ramas de las ramas. Queremos lo esencial, ese 80/20 que ya nos posiciona en hacer algo distinto y que queremos <em>testear</em>. Esta resistencia a las ramificaciones se llama <strong>MVP</strong> o  <em>Minimum Viable Product</em>. Con el <em>MVP</em> hacemos dos cosas:</p>
+<ul>
+<li>Encontramos y <strong>definimos las funcionalidades básicas</strong> que juntas hacen que <em>la cosa</em> sea una cosa, y no una suma de <em>features</em> revoloteantes. Y asegurémosnos que la <em>cosa</em> también sea una <em>cosa nueva</em> que agregue valor.</li>
+<li>Recolectamos <strong><em>feedback</em></strong> del usuario. Nunca nos olvidamos que trabajamos para Roberto, nuestro ahora amigo.</li>
+</ul>
+<p>Acá nos podemos hacer las siguientes <strong>preguntas de scope</strong>:</p>
+<ul>
+<li>¿Cómo se vería la solución más simple que agrega valor?</li>
+<li>¿Cuál es la pregunta más importante que queremos responder?</li>
+<li>¿Cuales son los benchmarks mínimos que necesitamos satisfacer?</li>
+<li>¿Podemos entregar valor con los datos/recursos que tenemos?</li>
+<li>¿Qué restricciones existen?</li>
+<li>¿Existe soluciones baseline que podamos apalancar?</li>
+</ul>
+<p>Y <strong>preguntas técnicas</strong>:</p>
+<ul>
+<li>¿Tenemos suficientes datos para crear un modelo inicial robusto?</li>
+<li>¿Podemos procesar por batches y luego en tiempo real?</li>
+<li>¿Qué deudas técnicas podemos comprometer con tal de desarrollar rápido?</li>
+<li>¿Cómo evaluamos el funcionamiento técnico del approach (eg. tiempos de respuesta)?</li>
+</ul>
+<p>Si necesitamos desarrolar en equipo, tambien <strong>preguntas estratégicas</strong>:</p>
+<ul>
+<li>¿Cuál es el timeline que tenemos?</li>
+<li>¿Cuál es la forma más rápida de llegar a los usuarios para obtener feedback?</li>
+<li>¿Qué aprendizajes queremos obtener de este <em>MVP</em>?</li>
+<li>¿Qué métricas <em>trackearemos</em>?</li>
+<li>¿Cómo incorporaremos el <em>feedback</em> de usuario?</li>
+</ul>
+<p>Y no olvidemos de <strong>mitigar riesgos</strong>:</p>
+<ul>
+<li>¿Cuales son los supuestos o los <em>unkowns</em> de nuestro approach?</li>
+<li>¿Qué pasa si <em>la cosa</em> se desempeña bajo lo esperado?</li>
+<li>¿Hay consideraciones éticas que necesitamos respetar?</li>
+<li>¿Cuál es el <em>fallback plan</em> si el <em>MVP</em> no funciona?</li>
+<li>¿Cómo comunciaremos las limitaciones del <em>MVP</em> a los stakeholders?</li>
+</ul>
+<p>Por último, queremos planificar el <strong>deployment y adopción</strong>:</p>
+<ul>
+<li>¿Cuál es la forma más simple de integrar <em>la cosa</em> a los <em>workflows</em> actuales?</li>
+<li>¿Quiénes tienen que estar involucrados en probar el <em>MVP</em>?</li>
+<li>¿Qué soporte necesitarán los usuarios (eg. documentación, manual, talleres)?</li>
+<li>¿Cómo obtenemos <em>feedback</em> estructurado desde los usuarios?</li>
+<li>¿Qué haría que los usuarios quieran seguir usando esta solución?</li>
+</ul>
+<h2 class="heading" id="arquitectura-tech">
+  Arquitectura tech
+  <a class="anchor" href="#arquitectura-tech">#</a>
+</h2>
+<p>En este paso, necesitamos pensar en los huesos o los fierros que darán soporte para <em>parar</em> nuestro producto. Es importante tener una visión de largo plazo, que sea flexible y ágil para escalar y absorber modificaciones. Que funcione hoy, y escale mañana.</p>
+<p>Algunos puntos a considerar para la arquitectura considerando número de usuario y tmamaño de datos son:</p>
+<ul>
+<li>Frecuencia de actualización de los datos</li>
+<li>Dónde y cómo sera <em>deployeada</em> la solución</li>
+<li>Puntos de integración con sistemas existentes</li>
+<li>Dependencias técnicas y limitaciones</li>
+</ul>
+<p><em>Pro tip</em>: documentar las decisiones y su razonamiento para poder compartirlas con los equipos técnicos.</p>
+<h2 class="heading" id="desarrollando-el-producto">
+  Desarrollando el producto
+  <a class="anchor" href="#desarrollando-el-producto">#</a>
+</h2>
+<p>Si queremos ser ágiles, trabajemos <em>agile</em> (sí, es obvio). Planificar y compartimentar (así se dice?) el trabajo en ciclos de 1-2 semanas. Cada ciclo cumple una misión, y está compuesto por una colección de tareas. Después de cada ciclo, se comparten los progresos con los stakeholders para validar que estamos en el camino correcto. Si noes así, la idea es absorber rápido lo que necesitamos incluir mediante un plan para el <em>sprint</em> siguiente.</p>
+<p>Una máxima: <strong>crear prototipos rápido para <em>testear</em> supuestos críticos</strong>. Mock-ups, dashboards, lo que sea pero tiene que ser rápido para reemplazar la imaginación por una cosa única sobre la que podamos opinar y construir.</p>
+<p>Un recordatorio: <strong>colaborar <em>cross</em>-discipplinas</strong>. Necesitamos conectarnos con la gente de datos, infraestructura, diseño y negocio. Y Roberto, por supuesto.</p>
+<p>Durante todo el proceso de desarrollo, es importante tener un ojo puesto en el horizonte, donde <em>trackeamos</em> las métricas que nos importan y vamos registrando nuestros avances cuantificables y cuantitativos.</p>
+<h2 class="heading" id="medición-e-iteración">
+  Medición e iteración
+  <a class="anchor" href="#medici%c3%b3n-e-iteraci%c3%b3n">#</a>
+</h2>
+<p>Una vez implementado nuestro <em>MVP</em>, la misión es doble:</p>
+<ul>
+<li><strong>Monitorear</strong> (métricas, comportamientos, evaluación de usuario, impacto en el negocio)</li>
+<li><strong>Mejorar</strong> (planificar modificaciones o nuevos features, priorizando por potencial impacto)</li>
+</ul>
+<p>Y repetir.</p>
+<h2 class="heading" id="conclusión">
+  Conclusión
+  <a class="anchor" href="#conclusi%c3%b3n">#</a>
+</h2>
+<p>Cuando empiezas a ver tus proyectos de datos como si fueran productos, estás cambiando el juego. Ya no es solo códigos y modelos complicados - estás creando algo que realmente sirve y que la gente quiere usar. Con este enfoque, tu trabajo técnico se convierte en herramientas útiles que resuelven problemas reales y que la gente valora. Al final, lo que importa no es lo complejo que sea tu análisis, sino que alguien lo use y tenga una buena experiencia haciéndolo.</p>
+
+    
+  </div>
+
+  
+
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flex">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/posts/hey-bob/">
+                        Invocando a Bob Dylan - crea tu primer python package
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  <footer>
+    
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+  
+
+</body>
+
+<script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+<script defer src="/js/copy-code.js"></script>
+</html>

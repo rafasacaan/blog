@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on rafa sacaan</title>
+    <link>https://www.rafasacaan.com/</link>
+    <description>Recent content in Home on rafa sacaan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.rafasacaan.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data science como producto</title>
+      <link>https://www.rafasacaan.com/posts/product-mindset/</link>
+      <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.rafasacaan.com/posts/product-mindset/</guid>
+      <description>Una guía corta para desarrollar data science desde un approach de producto</description>
+    </item>
+    <item>
+      <title>Invocando a Bob Dylan - crea tu primer python package</title>
+      <link>https://www.rafasacaan.com/posts/hey-bob/</link>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.rafasacaan.com/posts/hey-bob/</guid>
+      <description>Crea tu propio paquete de python para obtener letras de Bob Dylan cuando más las necesites.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://www.rafasacaan.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.rafasacaan.com/about/</guid>
+      <description>&lt;p&gt;Ingeniero Civil de la &lt;a href=&#34;https://www.uc.cl/&#34;&gt;Pontificia Universidad Católica de Chile&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Fui investigador en el &lt;a href=&#34;https://centroenergia.cl/&#34;&gt;Centro de Energía&lt;/a&gt; en la Universidad de Chile, estudiando la resiliencia de sistemas de potencia, y nos ganamos un &lt;a href=&#34;https://www.gov.uk/government/news/2018-newton-prize-shortlist-announced-in-chile&#34;&gt;premio&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Master’s en operations Research y Data Science de la &lt;a href=&#34;https://www.ed.ac.uk/&#34;&gt;Universidad de Edimburgo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Actualmente, trabajo como Data Scientist/Manager en  &lt;a href=&#34;https://www.bain.com&#34;&gt;Bain&lt;/a&gt; en Santiago.&lt;/p&gt;&#xA;&lt;p&gt;En mi tiempo libre leo literatura, practico deportes como si no hubiera un mañana y escribo sin ninguna pretensión (creo).&lt;/p&gt;&#xA;&lt;p&gt;También soy fanático de escuchar y grabar música en cassettes, nosé porqué.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Apps</title>
+      <link>https://www.rafasacaan.com/apps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.rafasacaan.com/apps/</guid>
+      <description>&lt;h3 class=&#34;heading&#34; id=&#34;munraclhttpswwwmunracl&#34;&gt;&#xA;  &lt;a href=&#34;https://www.munra.cl&#34;&gt;munra.cl&lt;/a&gt;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#munraclhttpswwwmunracl&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Invoca a munra para obtener algunas recetas del más allá y empujarte a re-enceder tu creatividad.&lt;/p&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;yoescritorclhttpswwwyoescritorcl&#34;&gt;&#xA;  &lt;a href=&#34;https://www.yoescritor.cl&#34;&gt;yoescritor.cl&lt;/a&gt;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#yoescritorclhttpswwwyoescritorcl&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Todos tenemos un escritor adentro, sólo tenemos que encontrarlo.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

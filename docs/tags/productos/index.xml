@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Productos on rafa sacaan</title>
+    <link>https://www.rafasacaan.com/tags/productos/</link>
+    <description>Recent content in Productos on rafa sacaan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.rafasacaan.com/tags/productos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data science como producto</title>
+      <link>https://www.rafasacaan.com/posts/product-mindset/</link>
+      <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.rafasacaan.com/posts/product-mindset/</guid>
+      <description>Una guía corta para desarrollar data science desde un approach de producto</description>
+    </item>
+  </channel>
+</rss>
