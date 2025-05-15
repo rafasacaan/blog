@@ -42,7 +42,7 @@ listSummaries = true
 listDateFormat = '2 Jan 2006'
 
 # Breadcrumbs
-#breadcrumbs = true
+breadcrumbs = false
 
 # Social icons
 [[params.social]]
