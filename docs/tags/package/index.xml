@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Package on rafa sacaan</title>
-    <link>https://www.rafasacaan.com/tags/package/</link>
+    <link>http://localhost:1313/tags/package/</link>
     <description>Recent content in Package on rafa sacaan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.rafasacaan.com/tags/package/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/package/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Invocando a Bob Dylan - crea tu primer python package</title>
-      <link>https://www.rafasacaan.com/posts/hey-bob/</link>
+      <link>http://localhost:1313/posts/hey-bob/</link>
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.rafasacaan.com/posts/hey-bob/</guid>
+      <guid>http://localhost:1313/posts/hey-bob/</guid>
       <description>Crea tu propio paquete de python para obtener letras de Bob Dylan cuando más las necesites.</description>
     </item>
   </channel>
