@@ -2,11 +2,8 @@
 title: "Recordatorios sobre la creatividad"
 date: "2025-06-05"
 summary: "La creatividad abre espacios, la tecnología va detrás."
-toc: false
-draft: true
+draft: false
 readTime: true
-autonumber: true
-math: true
 tags: ["notas"]
 showTags: false
 ---

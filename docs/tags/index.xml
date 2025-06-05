@@ -6,34 +6,13 @@
     <description>Recent content in Tags on rafa sacaan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Productos</title>
-      <link>http://localhost:1313/tags/productos/</link>
-      <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/productos/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Package</title>
-      <link>http://localhost:1313/tags/package/</link>
-      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/package/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tutorial</title>
-      <link>http://localhost:1313/tags/tutorial/</link>
-      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tutorial/</guid>
+      <title>Notas</title>
+      <link>http://localhost:1313/tags/notas/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/notas/</guid>
       <description></description>
     </item>
   </channel>

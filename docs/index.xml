@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on rafa sacaan</title>
+    <title>rafa sacaan</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Home on rafa sacaan</description>
+    <description>Recent content on rafa sacaan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Data science como producto</title>
-      <link>http://localhost:1313/posts/product-mindset/</link>
-      <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/product-mindset/</guid>
-      <description>Una guía corta para desarrollar data science desde un approach de producto</description>
-    </item>
-    <item>
-      <title>Invocando a Bob Dylan - crea tu primer python package</title>
-      <link>http://localhost:1313/posts/hey-bob/</link>
-      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hey-bob/</guid>
-      <description>Crea tu propio paquete de python para obtener letras de Bob Dylan cuando más las necesites.</description>
+      <title>Recordatorios sobre la creatividad</title>
+      <link>http://localhost:1313/posts/about_creativity/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/about_creativity/</guid>
+      <description>La creatividad abre espacios, la tecnología va detrás.</description>
     </item>
     <item>
       <title>About</title>
@@ -34,7 +27,7 @@
       <link>http://localhost:1313/apps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/apps/</guid>
-      <description>&lt;h3 class=&#34;heading&#34; id=&#34;munraclhttpswwwmunracl&#34;&gt;&#xA;  &lt;a href=&#34;https://www.munra.cl&#34;&gt;munra.cl&lt;/a&gt;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#munraclhttpswwwmunracl&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Invoca a munra para obtener algunas recetas del más allá y empujarte a re-enceder tu creatividad.&lt;/p&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;yoescritorclhttpswwwyoescritorcl&#34;&gt;&#xA;  &lt;a href=&#34;https://www.yoescritor.cl&#34;&gt;yoescritor.cl&lt;/a&gt;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#yoescritorclhttpswwwyoescritorcl&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Todos tenemos un escritor adentro, sólo tenemos que encontrarlo.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;munraclhttpswwwmunracl&#34;&gt;&lt;a href=&#34;https://www.munra.cl&#34;&gt;munra.cl&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Invoca a munra para obtener algunas recetas del más allá y empujarte a re-enceder tu creatividad.&lt;/p&gt;&#xA;&lt;h3 id=&#34;yoescritorclhttpswwwyoescritorcl&#34;&gt;&lt;a href=&#34;https://www.yoescritor.cl&#34;&gt;yoescritor.cl&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Todos tenemos un escritor adentro, sólo tenemos que encontrarlo.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
