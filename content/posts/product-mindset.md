@@ -4,7 +4,7 @@ date: "2025-03-04"
 summary: "Una guía corta para desarrollar data science desde un approach de producto"
 description: "Re-pensar todo proyecto de data science como un producto nos va a mantener siempre cerca del impacto."
 toc: false
-draft: false
+draft: true
 readTime: true
 autonumber: true
 math: true

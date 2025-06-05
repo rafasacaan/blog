@@ -3,6 +3,7 @@ title: Invocando a Bob Dylan - crea tu primer python package
 date: 2025-01-03
 summary: "Crea tu propio paquete de python para obtener letras de Bob Dylan cuando más las necesites."
 tags: ['tutorial', 'python', 'package' ]
+draft: true
 ---
 
 A veces me pasa que cuando llevo mucho tiempo escribiendo código, necesito invocar a la aleatoriedad para inyectarme una dosis de nueva energía. Se me ocurrió que Bob Dylan sería la la fuente indicada a quien recurrir, es por eso que creé esta librería de python que te devuelve texto en tu terminal con algunas frases aleatorias sacadas de sus canciones para los momentos en qué más lo necesites.
