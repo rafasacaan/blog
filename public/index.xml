@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rafasacaan</title>
-    <link>https://www.rafasacaan.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on rafasacaan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2025, rafasacaan</copyright>
     <lastBuildDate>Thu, 05 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.rafasacaan.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>la creatividad: breve recordatorio</title>
-      <link>https://www.rafasacaan.com/posts/creatividad/</link>
+      <link>http://localhost:1313/posts/creatividad/</link>
       <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.rafasacaan.com/posts/creatividad/</guid>
+      <guid>http://localhost:1313/posts/creatividad/</guid>
       <description>la creatividad abre espacios, la tecnología va detrás.</description>
     </item>
     <item>
       <title>contact</title>
-      <link>https://www.rafasacaan.com/contact/</link>
+      <link>http://localhost:1313/contact/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.rafasacaan.com/contact/</guid>
+      <guid>http://localhost:1313/contact/</guid>
       <description>&lt;p&gt;rafasacaan at gmail.com 👋🏻&lt;/p&gt;</description>
     </item>
     <item>
       <title>about</title>
-      <link>https://www.rafasacaan.com/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.rafasacaan.com/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;Ingeniero Civil de la &lt;a href=&#34;https://www.uc.cl/&#34;&gt;Pontificia Universidad Católica de Chile&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Fui investigador en el &lt;a href=&#34;https://centroenergia.cl/&#34;&gt;Centro de Energía&lt;/a&gt; en la Universidad de Chile, estudiando la resiliencia de sistemas de potencia, y nos ganamos un &lt;a href=&#34;https://www.gov.uk/government/news/2018-newton-prize-shortlist-announced-in-chile&#34;&gt;premio&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Master’s en operations Research y Data Science de la &lt;a href=&#34;https://www.ed.ac.uk/&#34;&gt;Universidad de Edimburgo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Actualmente, trabajo como Data Scientist/Manager en  &lt;a href=&#34;https://www.bain.com&#34;&gt;Bain&lt;/a&gt; en Santiago.&lt;/p&gt;&#xA;&lt;p&gt;En mi tiempo libre leo literatura, practico deportes como si no hubiera un mañana y escribo sin ninguna pretensión (creo).&lt;/p&gt;&#xA;&lt;p&gt;También soy fanático de escuchar y grabar música en cassettes, nosé porqué.&lt;/p&gt;</description>
     </item>
     <item>
       <title>apps</title>
-      <link>https://www.rafasacaan.com/apps/</link>
+      <link>http://localhost:1313/apps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.rafasacaan.com/apps/</guid>
+      <guid>http://localhost:1313/apps/</guid>
       <description>&lt;h3 id=&#34;munracl&#34;&gt;&lt;a href=&#34;https://www.munra.cl&#34;&gt;munra.cl&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Invoca a munra para obtener algunas recetas del más allá y empujarte a re-enceder tu creatividad.&lt;/p&gt;&#xA;&lt;h3 id=&#34;yoescritorcl&#34;&gt;&lt;a href=&#34;https://www.yoescritor.cl&#34;&gt;yoescritor.cl&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Todos tenemos un escritor adentro, sólo tenemos que encontrarlo.&lt;/p&gt;</description>
     </item>
   </channel>
