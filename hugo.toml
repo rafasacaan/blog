@@ -22,17 +22,16 @@ ignoreErrors = ["error-remote-getjson"]
 
 
 [menu]
+  [[menu.main]]
+    identifier = "apps"
+    name = "apps"
+    url = "/apps/"
+    weight = 10
 
   [[menu.main]]
     identifier = "about"
     name = "about"
     url = "/about/"
-    weight = 10
-
-  [[menu.main]]
-    identifier = "apps"
-    name = "apps"
-    url = "/apps/"
     weight = 10
   
   [[menu.main]]
