@@ -1,0 +1,47 @@
+baseURL = 'https://www.rafasacaan.com/'
+languageCode = 'en-us'
+title = 'rafasacaan'
+theme = 'paper'
+copyright = "© 2025, rafasacaan"
+ignoreErrors = ["error-remote-getjson"]
+
+
+[params]
+    monoDarkIcon = true 
+    disablePostNavigation = true 
+    color = 'linen'
+    github = 'rafasacaan'
+    favicon = "favicon.ico"
+    rss = true
+
+    avatar = 'rafasacaan@gmail.com'
+    name = 'hola'
+    bio = """
+    mi nombre es rafa, soy data scientist y desarrollador de software, y me gusta la idea de usar la tecnología para ayudar a encontrarnos a nosotros mismos.
+    """
+
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    url = "/about/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "apps"
+    name = "apps"
+    url = "/apps/"
+    weight = 10
+  
+  [[menu.main]]
+    identifier = "contact"
+    name = "contact"
+    url = "/contact/"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
